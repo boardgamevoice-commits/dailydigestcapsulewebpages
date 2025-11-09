@@ -6,30 +6,30 @@
       name="viewport"
       content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
-    <title>Daily Digest Capsule · Developer Hub</title>
+    <title>Daily Digest Capsule · Stay Informed in 5 Minutes</title>
     <meta
       name="description"
-      content="Product overview, architecture, roadmap, and contact details for the Daily Digest Capsule iOS application."
+      content="Daily Digest Capsule delivers a curated five-minute briefing every day. Discover what makes the app simple, focused, and habit-friendly."
     />
     <style>
       :root {
         color-scheme: light dark;
-        --bg: #f2f2f7;
+        --bg: #f7f8fc;
         --card-bg: #ffffff;
-        --text-main: #000000;
-        --text-sub: #45454f;
+        --text-main: #111827;
+        --text-sub: #4b5563;
         --accent: #0a84ff;
-        --muted: #8e8e93;
+        --muted: #9ca3af;
         font-family: "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
       }
       @media (prefers-color-scheme: dark) {
         :root {
-          --bg: #000000;
-          --card-bg: #1c1c1e;
-          --text-main: #ffffff;
-          --text-sub: #d1d1d6;
-          --accent: #0a84ff;
-          --muted: #636366;
+          --bg: #05060a;
+          --card-bg: #111827;
+          --text-main: #f9fafb;
+          --text-sub: #d1d5db;
+          --accent: #4da3ff;
+          --muted: #6b7280;
         }
       }
       * {
@@ -39,20 +39,20 @@
         margin: 0;
         background: var(--bg);
         color: var(--text-main);
-        line-height: 1.6;
+        line-height: 1.7;
       }
       header {
-        padding: 64px 24px 48px;
+        padding: 64px 24px 56px;
         text-align: center;
-        background: linear-gradient(160deg, rgba(10, 132, 255, 0.12), transparent);
+        background: linear-gradient(160deg, rgba(10, 132, 255, 0.16), transparent);
       }
       header h1 {
-        font-size: clamp(32px, 4vw, 44px);
+        font-size: clamp(32px, 5vw, 46px);
         margin: 0 0 16px;
       }
       header p {
         max-width: 680px;
-        margin: 0 auto 24px;
+        margin: 0 auto 28px;
         font-size: 18px;
         color: var(--text-sub);
       }
@@ -75,19 +75,19 @@
       .btn-primary {
         background: var(--accent);
         color: #ffffff;
-        box-shadow: 0 10px 24px rgba(10, 132, 255, 0.18);
+        box-shadow: 0 12px 28px rgba(10, 132, 255, 0.22);
       }
       .btn-secondary {
         background: var(--card-bg);
         color: var(--text-main);
-        border: 1px solid rgba(142, 142, 147, 0.24);
+        border: 1px solid rgba(148, 163, 184, 0.28);
       }
       .btn:hover,
       .btn:focus-visible {
         transform: translateY(-2px);
       }
       main {
-        max-width: 1100px;
+        max-width: 960px;
         margin: 0 auto;
         padding: 0 24px 80px;
       }
@@ -96,7 +96,8 @@
       }
       h2 {
         font-size: 28px;
-        margin: 0 0 24px;
+        margin: 0 0 20px;
+        text-align: center;
       }
       p,
       li {
@@ -105,19 +106,20 @@
       }
       .card-grid {
         display: grid;
-        gap: 20px;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 18px;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       }
       .card {
         background: var(--card-bg);
-        padding: 24px;
-        border-radius: 20px;
-        box-shadow: 0 24px 32px rgba(0, 0, 0, 0.04);
-        border: 1px solid rgba(142, 142, 147, 0.14);
+        padding: 22px;
+        border-radius: 18px;
+        box-shadow: 0 18px 34px rgba(15, 23, 42, 0.08);
+        border: 1px solid rgba(148, 163, 184, 0.2);
       }
       .card h3 {
-        margin: 0 0 12px;
-        font-size: 20px;
+        margin: 0 0 10px;
+        font-size: 19px;
+        color: var(--text-main);
       }
       .tag {
         display: inline-flex;
@@ -126,49 +128,35 @@
         padding: 4px 12px;
         border-radius: 999px;
         font-size: 13px;
-        background: rgba(10, 132, 255, 0.12);
+        background: rgba(10, 132, 255, 0.14);
         color: var(--accent);
         margin-right: 8px;
         margin-bottom: 12px;
       }
-      .table-scroll {
-        overflow-x: auto;
-        border-radius: 16px;
-        border: 1px solid rgba(142, 142, 147, 0.18);
-        background: var(--card-bg);
+      .big-text {
+        font-size: 18px;
+        color: var(--text-main);
+        text-align: center;
+        margin: 0 auto 32px;
+        max-width: 720px;
       }
-      table {
-        width: 100%;
-        border-collapse: collapse;
-        min-width: 640px;
-      }
-      thead {
-        background: rgba(10, 132, 255, 0.08);
-      }
-      th,
-      td {
-        padding: 16px 20px;
-        text-align: left;
-        font-size: 15px;
-      }
-      tbody tr:not(:last-child) td {
-        border-bottom: 1px solid rgba(142, 142, 147, 0.18);
-      }
-      .timeline {
+      .steps {
         display: grid;
         gap: 16px;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       }
-      .timeline-item {
-        display: grid;
-        gap: 8px;
+      .step {
         background: var(--card-bg);
         padding: 20px;
         border-radius: 18px;
-        border: 1px solid rgba(142, 142, 147, 0.14);
+        border: 1px solid rgba(148, 163, 184, 0.24);
+        text-align: left;
       }
-      .timeline-item strong {
-        font-size: 16px;
-        color: var(--text-main);
+      .step strong {
+        display: inline-block;
+        font-size: 32px;
+        color: var(--accent);
+        margin-bottom: 8px;
       }
       footer {
         text-align: center;
@@ -181,7 +169,7 @@
       }
       @media (max-width: 720px) {
         header {
-          padding: 56px 20px 40px;
+          padding: 56px 20px 44px;
         }
         main {
           padding: 0 20px 64px;
@@ -195,266 +183,94 @@
   </head>
   <body>
     <header>
-      <div class="tag">v1.0 · Ready for Development</div>
-      <h1>Daily Digest Capsule</h1>
+      <div class="tag">v1.0 · Coming soon to iOS</div>
+      <h1>Your Daily Five-Minute Briefing</h1>
       <p>
-        Daily Digest Capsule is an iOS application that helps knowledge workers cut through information overload. Every morning, users receive a timed “capsule” filled with curated highlights they can read in under five minutes.
+        Daily Digest Capsule hand-picks the most useful headlines, quotes, and curiosities so you start (or end) the day feeling informed without feeling overwhelmed.
       </p>
       <div class="cta-group">
-        <a class="btn btn-primary" href="#core">Explore Core Features</a>
-        <a class="btn btn-secondary" href="#contact">Contact the Developer</a>
+        <a class="btn btn-primary" href="#signup">Join the Waitlist</a>
+        <a class="btn btn-secondary" href="./privacy.html">Privacy Promise</a>
       </div>
     </header>
     <main>
-      <section id="overview">
-        <h2>Product Positioning</h2>
+      <section id="why">
+        <h2>Why Daily Digest Capsule?</h2>
+        <p class="big-text">
+          Built for commuters, coffee-break readers, and bedtime scrollers who want the good stuff—quickly, calmly, and consistently.
+        </p>
         <div class="card-grid">
           <article class="card">
-            <h3>Who We Serve</h3>
-            <p>
-              Daily Digest Capsule targets busy professionals aged 25-45 who rely on a structured routine to stay informed. The app favors brevity, clarity, and daily habit-building.
-            </p>
+            <h3>Curated, Not Crowded</h3>
+            <p>One capsule per day with the essentials only. No infinite feeds. No doomscrolling.</p>
           </article>
           <article class="card">
-            <h3>Value Proposition</h3>
-            <ul>
-              <li>Curated summaries that reduce information anxiety</li>
-              <li>Ritual-friendly timing that reinforces daily engagement</li>
-              <li>Multidimensional insight across news, history, knowledge, and fun</li>
-              <li>Five-minute reading promise for maximum efficiency</li>
-            </ul>
+            <h3>Set It &amp; Forget It</h3>
+            <p>Pick a delivery time that suits your rhythm and the capsule arrives like clockwork.</p>
           </article>
           <article class="card">
-            <h3>Representative Personas</h3>
-            <ul>
-              <li>Efficient Lily: 28-year-old product manager reading on her commute</li>
-              <li>Curious David: 35-year-old engineer exploring trivia before bed</li>
-            </ul>
+            <h3>Feel-Good Variety</h3>
+            <p>News, history, quotes, horoscopes, and a dash of delight to keep things fresh.</p>
           </article>
         </div>
       </section>
 
       <section id="core">
-        <h2>Core & Optional Modules</h2>
+        <h2>What's Inside Each Capsule</h2>
         <div class="card-grid">
           <article class="card">
-            <h3>Core Modules (Always On)</h3>
-            <ul>
-              <li>Quote of the Day (ViewBits ZenQuotes)</li>
-              <li>On This Day in History (ViewBits OnThisDay)</li>
-              <li>Global News Headlines (ViewBits Headlines)</li>
-            </ul>
-            <p>
-              All core modules are free, require no API keys, and cache the most recent data locally for reliability.
-            </p>
+            <h3>Daily Quote</h3>
+            <p>A dose of inspiration or wit to set the tone for the day.</p>
           </article>
           <article class="card">
-            <h3>Optional Modules (Enabled by Default)</h3>
-            <ul>
-              <li>Daily Horoscope · Useless Fact · Daily Joke</li>
-              <li>Fortune Cookie · Life Hack</li>
-            </ul>
-            <p>
-              Users can toggle any optional module in Settings to tailor the capsule experience while showcasing breadth on first launch.
-            </p>
+            <h3>On This Day</h3>
+            <p>Three bite-sized historical highlights worth sharing over coffee.</p>
           </article>
           <article class="card">
-            <h3>Experience Highlights</h3>
-            <ul>
-              <li>Smart refresh logic that prioritizes cached data to avoid rate limits</li>
-              <li>Bilingual UI with selective content localization (English and Simplified Chinese)</li>
-              <li>Offline fallback that shows the previous capsule with a contextual notice</li>
-            </ul>
+            <h3>Headline Pulse</h3>
+            <p>Seven global stories with clear summaries and sources you can trust.</p>
+          </article>
+          <article class="card">
+            <h3>Optional Extras</h3>
+            <p>Toggle on horoscopes, jokes, fun facts, or fortune cookies when you want something lighter.</p>
           </article>
         </div>
       </section>
 
-      <section id="architecture">
-        <h2>Technical Architecture</h2>
-        <div class="card-grid">
-          <article class="card">
-            <h3>Primary Stack</h3>
-            <ul>
-              <li>SwiftUI with Combine and async/await</li>
-              <li>MVVM presentation layer backed by modular services</li>
-              <li>UserDefaults for lightweight storage, CoreData for future extensions</li>
-              <li>Apple frameworks: UserNotifications, StoreKit, BackgroundTasks</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Key Services</h3>
-            <ul>
-              <li>APIManager centralizes networking and error handling</li>
-              <li>CacheManager preserves one capsule per natural day</li>
-              <li>NotificationManager controls scheduling and permission prompts</li>
-              <li>IAPManager governs the ad-removal purchase flow</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>System Principles</h3>
-            <ul>
-              <li>Zero API key requirement for the v1.0 launch window</li>
-              <li>Module isolation to enable v1.5 features such as weather and widgets</li>
-              <li>Design aligned with Apple Human Interface Guidelines</li>
-            </ul>
-          </article>
+      <section id="flow">
+        <h2>Designed for Busy Schedules</h2>
+        <div class="steps">
+          <div class="step">
+            <strong>1</strong>
+            <h3>Choose Your Moment</h3>
+            <p>Schedule the capsule for your morning commute, lunch break, or wind-down routine.</p>
+          </div>
+          <div class="step">
+            <strong>2</strong>
+            <h3>Open &amp; Enjoy</h3>
+            <p>A playful “capsule opening” animation sets the vibe, then cards appear in a clean, scrollable stack.</p>
+          </div>
+          <div class="step">
+            <strong>3</strong>
+            <h3>Share or Save</h3>
+            <p>Tap to view details, share highlights, or refresh later when you’re offline—yesterday’s capsule is always there.</p>
+          </div>
         </div>
       </section>
 
-      <section id="api">
-        <h2>ViewBits API Coverage</h2>
-        <div class="table-scroll">
-          <table>
-            <thead>
-              <tr>
-                <th>Module</th>
-                <th>Endpoint</th>
-                <th>Presentation</th>
-                <th>Notes</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Quote of the Day</td>
-                <td><code>/zenquotes?mode=today</code></td>
-                <td>Quote body and author attribution</td>
-                <td>English-only content for premium tone</td>
-              </tr>
-              <tr>
-                <td>On This Day</td>
-                <td><code>/onthisday?m=&amp;d=</code></td>
-                <td>3-5 curated historical events</td>
-                <td>Supports English and Simplified Chinese</td>
-              </tr>
-              <tr>
-                <td>News Headlines</td>
-                <td><code>/headlines</code></td>
-                <td>Card: title, source, timestamp</td>
-                <td>Highlights 5-7 articles per capsule</td>
-              </tr>
-              <tr>
-                <td>Horoscope</td>
-                <td><code>/horoscope?sign=</code></td>
-                <td>Daily prediction with date</td>
-                <td>Optional module</td>
-              </tr>
-              <tr>
-                <td>Useless Fact</td>
-                <td><code>/uselessfacts?mode=today</code></td>
-                <td>Trivia snippet</td>
-                <td>English content</td>
-              </tr>
-              <tr>
-                <td>Daily Joke</td>
-                <td><code>/jester?mode=today</code></td>
-                <td>Text-only humor</td>
-                <td>English content</td>
-              </tr>
-              <tr>
-                <td>Fortune Cookie</td>
-                <td><code>/fortunecookie?mode=today</code></td>
-                <td>Fortune message and lucky number</td>
-                <td>English content</td>
-              </tr>
-              <tr>
-                <td>Life Hack</td>
-                <td><code>/lifehacks?mode=today</code></td>
-                <td>Practical tip description</td>
-                <td>English content</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <p>
-          Every endpoint runs on the unified ViewBits platform, simplifying monitoring, analytics, and future procurement while keeping launch costs at zero.
+      <section id="signup">
+        <h2>Be First to Know</h2>
+        <p class="big-text">
+          We’re putting the finishing touches on Daily Digest Capsule. Drop us a line and we’ll let you know the moment it hits the App Store.
         </p>
-      </section>
-
-      <section id="monetization">
-        <h2>Monetization Strategy</h2>
-        <div class="card-grid">
-          <article class="card">
-            <h3>Advertising Plan</h3>
-            <ul>
-              <li>App Open Ad at cold start (with graceful fallback)</li>
-              <li>Persistent banner slot on the home timeline</li>
-              <li>Silent failure handling to avoid experience friction</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Remove Ads IAP</h3>
-            <p>
-              Product ID <code>com.dailydigest.removeads</code> is a one-time $0.99 purchase that hides all ad placements. Successful transactions broadcast a global notification so views update immediately.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Key Metrics (3-Month Targets)</h3>
-            <ul>
-              <li>Daily active users ≥ 5,000 with 50% notification open rate</li>
-              <li>Conversion ≥ 2% and ad impression coverage ≥ 80%</li>
-              <li>Crash-free sessions ≥ 99.5% and load time under two seconds</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section id="roadmap">
-        <h2>10-Week Delivery Roadmap</h2>
-        <div class="timeline">
-          <div class="timeline-item">
-            <strong>Week 1 · Foundation</strong>
-            <p>Project scaffolding, dependency setup, and baseline models.</p>
-          </div>
-          <div class="timeline-item">
-            <strong>Weeks 2-3 · Core Services</strong>
-            <p>Ship networking layer, caching pipeline, and smart refresh logic with unit tests.</p>
-          </div>
-          <div class="timeline-item">
-            <strong>Weeks 4-5 · UI &amp; Interaction</strong>
-            <p>Implement the capsule feed, opening animation, settings screens, and dark mode polish.</p>
-          </div>
-          <div class="timeline-item">
-            <strong>Weeks 6-8 · Notifications &amp; Monetization</strong>
-            <p>Integrate local notifications, background refresh, AdMob placements, and ad removal IAP.</p>
-          </div>
-          <div class="timeline-item">
-            <strong>Weeks 9-10 · Localization &amp; Launch</strong>
-            <p>Finalize bilingual copy, optimize performance, execute QA, and prepare App Store assets.</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="risks">
-        <h2>Risk &amp; Mitigation</h2>
-        <div class="card-grid">
-          <article class="card">
-            <h3>API Availability</h3>
-            <p>Mitigated through caching, rate-aware refresh rules, and planned fallback providers.</p>
-          </article>
-          <article class="card">
-            <h3>User Retention</h3>
-            <p>Addressed with high-quality content, rich first-run modules, and timely notifications.</p>
-          </article>
-          <article class="card">
-            <h3>Compliance &amp; Review</h3>
-            <p>Aligned with Apple guidelines, with pre-flight validation of ads, purchases, and privacy docs.</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="contact">
-        <h2>Contact</h2>
-        <div class="card">
-          <p>
-            Need product materials, technical support, or partnership details? Reach out any time:
-          </p>
+        <div class="card" style="max-width: 520px; margin: 0 auto;">
+          <h3 style="margin-top: 0;">Say hello anytime</h3>
           <p>
             Email:
             <a href="mailto:fangdev1063@gmail.com">fangdev1063@gmail.com</a>
           </p>
-          <p>
-            For end-user data practices, see the
-            <a href="./privacy.html">Daily Digest Capsule Privacy Statement</a>.
+          <p style="margin-bottom: 0;">
+            Have feedback or partnership ideas? We’d love to hear about them.
           </p>
         </div>
       </section>
