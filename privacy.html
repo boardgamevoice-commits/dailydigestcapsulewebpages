@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Daily Digest Capsule · Privacy Statement</title>
+    <meta
+      name="description"
+      content="Privacy commitment, data usage, and contact details for the Daily Digest Capsule iOS application."
+    />
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #f2f2f7;
+        --card-bg: #ffffff;
+        --text-main: #1c1c1e;
+        --text-sub: #3a3a42;
+        --accent: #0a84ff;
+        --muted: #8e8e93;
+        font-family: "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #000000;
+          --card-bg: #1c1c1e;
+          --text-main: #f2f2f7;
+          --text-sub: #d1d1d6;
+          --accent: #0a84ff;
+          --muted: #636366;
+        }
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text-main);
+        line-height: 1.7;
+      }
+      header {
+        padding: 48px 24px 32px;
+        text-align: center;
+        background: linear-gradient(150deg, rgba(10, 132, 255, 0.15), transparent);
+      }
+      header h1 {
+        font-size: clamp(28px, 4vw, 40px);
+        margin: 0 0 16px;
+      }
+      header p {
+        max-width: 720px;
+        margin: 0 auto;
+        color: var(--text-sub);
+        font-size: 17px;
+      }
+      main {
+        max-width: 880px;
+        margin: 0 auto;
+        padding: 32px 24px 64px;
+      }
+      section {
+        background: var(--card-bg);
+        border-radius: 20px;
+        padding: 24px 28px;
+        margin-bottom: 24px;
+        border: 1px solid rgba(142, 142, 147, 0.18);
+        box-shadow: 0 22px 32px rgba(0, 0, 0, 0.04);
+      }
+      h2 {
+        margin-top: 0;
+        margin-bottom: 16px;
+        font-size: 22px;
+      }
+      p,
+      li {
+        color: var(--text-sub);
+        font-size: 15px;
+      }
+      ul {
+        margin: 0;
+        padding-left: 20px;
+      }
+      a {
+        color: var(--accent);
+      }
+      footer {
+        text-align: center;
+        padding: 32px 24px 48px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+      @media (max-width: 640px) {
+        header {
+          padding: 40px 20px 28px;
+        }
+        main {
+          padding: 24px 20px 56px;
+        }
+        section {
+          padding: 20px 22px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Daily Digest Capsule Privacy Statement</h1>
+      <p>
+        Thank you for choosing Daily Digest Capsule (the “App”). Your privacy matters to us. This policy explains what data we handle, how we protect it, and which choices you can make regarding your personal information.
+      </p>
+    </header>
+    <main>
+      <section id="scope">
+        <h2>1. Scope</h2>
+        <p>
+          This statement applies to the Daily Digest Capsule iOS application and its related services, including daily capsule delivery, optional content modules, advertising, and in-app purchases. By installing or using the App, you acknowledge and agree to the practices described below.
+        </p>
+      </section>
+
+      <section id="data-collection">
+        <h2>2. Data We Collect</h2>
+        <p>We minimize data collection and prioritize on-device processing. The App uses the following information:</p>
+        <ul>
+          <li>
+            <strong>Locally stored settings</strong>: Capsule cache, module toggles, notification schedule, language preference, appearance mode, ad-removal status, and optional birthday or zodiac sign. These values remain on your device and are not transmitted to our servers.
+          </li>
+          <li>
+            <strong>Notification authorization state</strong>: Used to determine whether we can send daily reminders. No notification content is logged or uploaded.
+          </li>
+          <li>
+            <strong>Crash and performance diagnostics (optional)</strong>: If we integrate Firebase Crashlytics or Analytics in a future release, anonymized data will be collected strictly to improve stability. We will request your consent before enabling these services.
+          </li>
+          <li>
+            <strong>Third-party service data</strong>: See Section 5 for details. We do not receive the raw data collected by these providers.
+          </li>
+        </ul>
+        <p>
+          The App does not request or store sensitive identifiers such as contacts, photos, precise location, or other data unrelated to the daily capsule experience.
+        </p>
+      </section>
+
+      <section id="usage">
+        <h2>3. How We Use Your Data</h2>
+        <ul>
+          <li>Display cached capsules when offline or on a weak network.</li>
+          <li>Deliver daily push notifications at your chosen time.</li>
+          <li>Remember your module preferences and language settings.</li>
+          <li>Determine whether to show advertisements or honor ad-free access.</li>
+          <li>Improve performance and reliability based on anonymous aggregate insights.</li>
+        </ul>
+        <p>
+          We never sell, rent, or lend your personal data. Information is used solely to operate and enhance Daily Digest Capsule.
+        </p>
+      </section>
+
+      <section id="storage">
+        <h2>4. Storage &amp; Security</h2>
+        <ul>
+          <li>Capsule cache expires automatically at midnight (local time) and is overwritten by the next day’s data.</li>
+          <li>User preferences rely on iOS-secured storage mechanisms such as UserDefaults and Keychain.</li>
+          <li>We do not maintain remote databases that store your personal information.</li>
+          <li>Any future cloud features will prompt for explicit consent and provide detailed disclosure.</li>
+        </ul>
+      </section>
+
+      <section id="third-party">
+        <h2>5. Third-Party Services</h2>
+        <p>The App currently integrates, or plans to integrate, the services below:</p>
+        <ul>
+          <li>
+            <strong>ViewBits API Platform</strong>: Supplies quotes, history events, news, horoscope, jokes, and other content. Requests are stateless and do not carry personally identifiable information.
+          </li>
+          <li>
+            <strong>Google AdMob</strong> (optional): Serves the App Open Ad and banner placements. AdMob may collect device identifiers in accordance with its privacy policy. You can limit tracking through system settings or unlock the ad-free upgrade.
+          </li>
+          <li>
+            <strong>Apple StoreKit</strong>: Handles the “Remove Ads” in-app purchase. Payment data is processed and stored by Apple; we do not retain receipts beyond Apple’s standard APIs.
+          </li>
+          <li>
+            <strong>Firebase Analytics / Crashlytics</strong> (planned): If adopted, these tools will gather anonymous aggregated metrics. We will announce the rollout in-app and provide an opt-out mechanism where applicable.
+          </li>
+        </ul>
+        <p>
+          Please review the privacy practices of each provider to understand how they manage data.
+        </p>
+      </section>
+
+      <section id="rights">
+        <h2>6. Your Rights &amp; Choices</h2>
+        <ul>
+          <li>
+            <strong>Access and update</strong>: Adjust notification time, module toggles, and language preferences directly within the App.
+          </li>
+          <li>
+            <strong>Withdraw consent</strong>: Disable notifications or ad tracking in iOS settings, or delete the App to remove all locally stored data.
+          </li>
+          <li>
+            <strong>Data deletion</strong>: Uninstalling the App erases cached capsules and settings. Fresh defaults apply on reinstallation.
+          </li>
+        </ul>
+      </section>
+
+      <section id="minor">
+        <h2>7. Children’s Privacy</h2>
+        <p>
+          The App is designed for adults. Users under the age of 14 should only access the App with guardian approval. We do not knowingly collect personal data from children; if such data is identified, we will remove it promptly.
+        </p>
+      </section>
+
+      <section id="updates">
+        <h2>8. Policy Updates</h2>
+        <p>
+          We may revise this statement as our features evolve or regulations change. Significant updates will be highlighted in-app along with an effective date. Continued use of the App indicates acceptance of the revised policy.
+        </p>
+        <p>Current Version: v1.0 · Effective Date: November 9, 2025</p>
+      </section>
+
+      <section id="contact">
+        <h2>9. Contact</h2>
+        <p>
+          Questions, feedback, or requests regarding this policy can be sent to:
+        </p>
+        <p>
+          Email:
+          <a href="mailto:fangdev1063@gmail.com">fangdev1063@gmail.com</a>
+        </p>
+        <p>
+          We aim to respond within 15 business days. To safeguard your privacy, we may request additional verification before processing certain requests.
+        </p>
+      </section>
+    </main>
+    <footer>
+      © 2025 Daily Digest Capsule. Last updated: 2025-11-09
+    </footer>
+  </body>
+</html>
+
