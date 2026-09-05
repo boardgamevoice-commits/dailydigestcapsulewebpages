@@ -1,283 +1,375 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, viewport-fit=cover"
-    />
-    <title>Daily Digest Capsule · Stay Informed in 5 Minutes</title>
-    <meta
-      name="description"
-      content="Daily Digest Capsule delivers a curated five-minute briefing every day. Discover what makes the app simple, focused, and habit-friendly."
-    />
-    <style>
-      :root {
-        color-scheme: light dark;
-        --bg: #f7f8fc;
-        --card-bg: #ffffff;
-        --text-main: #111827;
-        --text-sub: #4b5563;
-        --accent: #0a84ff;
-        --muted: #9ca3af;
-        font-family: "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      }
-      @media (prefers-color-scheme: dark) {
-        :root {
-          --bg: #05060a;
-          --card-bg: #111827;
-          --text-main: #f9fafb;
-          --text-sub: #d1d5db;
-          --accent: #4da3ff;
-          --muted: #6b7280;
-        }
-      }
-      * {
-        box-sizing: border-box;
-      }
-      body {
-        margin: 0;
-        background: var(--bg);
-        color: var(--text-main);
-        line-height: 1.7;
-      }
-      header {
-        padding: 64px 24px 56px;
-        text-align: center;
-        background: linear-gradient(160deg, rgba(10, 132, 255, 0.16), transparent);
-      }
-      header h1 {
-        font-size: clamp(32px, 5vw, 46px);
-        margin: 0 0 16px;
-      }
-      header p {
-        max-width: 680px;
-        margin: 0 auto 28px;
-        font-size: 18px;
-        color: var(--text-sub);
-      }
-      header .cta-group {
-        display: flex;
-        justify-content: center;
-        gap: 16px;
-        flex-wrap: wrap;
-      }
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 12px 20px;
-        border-radius: 999px;
-        font-weight: 600;
-        text-decoration: none;
-        transition: transform 0.18s ease, box-shadow 0.18s ease;
-      }
-      .btn-primary {
-        background: var(--accent);
-        color: #ffffff;
-        box-shadow: 0 12px 28px rgba(10, 132, 255, 0.22);
-      }
-      .btn-secondary {
-        background: var(--card-bg);
-        color: var(--text-main);
-        border: 1px solid rgba(148, 163, 184, 0.28);
-      }
-      .btn:hover,
-      .btn:focus-visible {
-        transform: translateY(-2px);
-      }
-      main {
-        max-width: 960px;
-        margin: 0 auto;
-        padding: 0 24px 80px;
-      }
-      section {
-        margin-bottom: 56px;
-      }
-      h2 {
-        font-size: 28px;
-        margin: 0 0 20px;
-        text-align: center;
-      }
-      p,
-      li {
-        color: var(--text-sub);
-        font-size: 16px;
-      }
-      .card-grid {
-        display: grid;
-        gap: 18px;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      }
-      .card {
-        background: var(--card-bg);
-        padding: 22px;
-        border-radius: 18px;
-        box-shadow: 0 18px 34px rgba(15, 23, 42, 0.08);
-        border: 1px solid rgba(148, 163, 184, 0.2);
-      }
-      .card h3 {
-        margin: 0 0 10px;
-        font-size: 19px;
-        color: var(--text-main);
-      }
-      .tag {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        padding: 4px 12px;
-        border-radius: 999px;
-        font-size: 13px;
-        background: rgba(10, 132, 255, 0.14);
-        color: var(--accent);
-        margin-right: 8px;
-        margin-bottom: 12px;
-      }
-      .big-text {
-        font-size: 18px;
-        color: var(--text-main);
-        text-align: center;
-        margin: 0 auto 32px;
-        max-width: 720px;
-      }
-      .steps {
-        display: grid;
-        gap: 16px;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      }
-      .step {
-        background: var(--card-bg);
-        padding: 20px;
-        border-radius: 18px;
-        border: 1px solid rgba(148, 163, 184, 0.24);
-        text-align: left;
-      }
-      .step strong {
-        display: inline-block;
-        font-size: 32px;
-        color: var(--accent);
-        margin-bottom: 8px;
-      }
-      footer {
-        text-align: center;
-        padding: 32px 24px 48px;
-        font-size: 14px;
-        color: var(--muted);
-      }
-      a {
-        color: var(--accent);
-      }
-      @media (max-width: 720px) {
-        header {
-          padding: 56px 20px 44px;
-        }
-        main {
-          padding: 0 20px 64px;
-        }
-        .btn {
-          width: 100%;
-          justify-content: center;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <div class="tag">v1.0 · Coming soon to iOS</div>
-      <h1>Your Daily Five-Minute Briefing</h1>
-      <p>
-        Daily Digest Capsule hand-picks the most useful headlines, quotes, and curiosities so you start (or end) the day feeling informed without feeling overwhelmed.
-      </p>
-      <div class="cta-group">
-        <a class="btn btn-primary" href="#signup">Join the Waitlist</a>
-        <a class="btn btn-secondary" href="./privacy.html">Privacy Promise</a>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Digest Capsule - Your Daily Information Nutrition for iOS</title>
+  <meta name="description" content="Daily Digest Capsule is your curated morning information dose. Combat information overload with bite-sized wisdom, history, facts, and insights. Built for iOS 17+.">
+  <meta property="og:title" content="Daily Digest Capsule - Your Daily Information Nutrition">
+  <meta property="og:description" content="Curated morning information dose. Bite-sized wisdom, history, facts, and insights.">
+  <meta property="og:image" content="assets/app_icon.png">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" type="image/png" href="assets/app_icon.png">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container nav-container">
+      <div class="brand-badge">
+        <img src="assets/app_icon.png" alt="Daily Digest Capsule Icon">
+        <span class="brand-name">Daily Digest</span>
+        <span class="version-pill">v1.0.6 · iOS 17+</span>
       </div>
-    </header>
-    <main>
-      <section id="why">
-        <h2>Why Daily Digest Capsule?</h2>
-        <p class="big-text">
-          Built for commuters, coffee-break readers, and bedtime scrollers who want the good stuff—quickly, calmly, and consistently.
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="#features" data-i18n="navFeatures">Features</a></li>
+          <li><a href="#capsule-demo" data-i18n="navCapsule">Today's Dose</a></li>
+          <li><a href="privacy.html" data-i18n="navPrivacy">Privacy</a></li>
+          <li><a href="terms.html" data-i18n="navTerms">Terms</a></li>
+        </ul>
+        <button id="langToggle" class="lang-btn">中文</button>
+        <a href="https://apps.apple.com/app/id6755092347" target="_blank" rel="noopener" class="cta-nav" data-i18n="ctaGetApp">Get Capsule</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-pill">
+          <span class="capsule-icon">💊</span>
+          <span data-i18n="heroBadge">Cure Information Overload · 3 Minutes a Day</span>
+        </div>
+        <h1 class="hero-title" data-i18n="heroTitle">Your Daily Information Nutrition</h1>
+        <p class="hero-subtitle" data-i18n="heroSubtitle">
+          Replace endless, anxiety-inducing social feeds with a thoughtfully packed daily knowledge capsule. Timed delivery, multi-dimensional wisdom, historical echoes, and inspirational sparks.
         </p>
-        <div class="card-grid">
-          <article class="card">
-            <h3>Curated, Not Crowded</h3>
-            <p>One capsule per day with the essentials only. No infinite feeds. No doomscrolling.</p>
-          </article>
-          <article class="card">
-            <h3>Set It &amp; Forget It</h3>
-            <p>Pick a delivery time that suits your rhythm and the capsule arrives like clockwork.</p>
-          </article>
-          <article class="card">
-            <h3>Feel-Good Variety</h3>
-            <p>News, history, quotes, horoscopes, and a dash of delight to keep things fresh.</p>
-          </article>
+        <div class="hero-actions">
+          <a href="https://apps.apple.com/app/id6755092347" target="_blank" rel="noopener" class="btn-appstore">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.61-.75 1.04-1.8 0.92-2.87-.93.04-2.02.63-2.67 1.38-.56.65-1.07 1.71-.93 2.74 1.05.08 2.08-.54 2.68-1.25z"/>
+            </svg>
+            <span data-i18n="heroDownload">Download on App Store</span>
+          </a>
+          <a href="#capsule-demo" class="btn-secondary" data-i18n="heroExploreDemo">
+            <span>Unbox Daily Dose</span> &darr;
+          </a>
         </div>
-      </section>
 
-      <section id="core">
-        <h2>What's Inside Each Capsule</h2>
-        <div class="card-grid">
-          <article class="card">
-            <h3>Daily Quote</h3>
-            <p>A dose of inspiration or wit to set the tone for the day.</p>
-          </article>
-          <article class="card">
-            <h3>On This Day</h3>
-            <p>Three bite-sized historical highlights worth sharing over coffee.</p>
-          </article>
-          <article class="card">
-            <h3>Headline Pulse</h3>
-            <p>Seven global stories with clear summaries and sources you can trust.</p>
-          </article>
-          <article class="card">
-            <h3>Optional Extras</h3>
-            <p>Toggle on horoscopes, jokes, fun facts, or fortune cookies when you want something lighter.</p>
-          </article>
-        </div>
-      </section>
+        <!-- Interactive Capsule Unboxing Widget -->
+        <div class="capsule-interactive-box" id="capsule-demo">
+          <div class="capsule-box-header">
+            <div>
+              <span class="capsule-pill-tag" data-i18n="capsuleDateTag">TODAY'S MORNING DOSE</span>
+            </div>
+            <button id="btnShuffleCapsule" class="lang-btn" style="color: var(--accent-gold); border-color: rgba(245, 158, 11, 0.3);">
+              🎲 <span data-i18n="btnShuffle">Shuffle Another Day</span>
+            </button>
+          </div>
 
-      <section id="flow">
-        <h2>Designed for Busy Schedules</h2>
-        <div class="steps">
-          <div class="step">
-            <strong>1</strong>
-            <h3>Choose Your Moment</h3>
-            <p>Schedule the capsule for your morning commute, lunch break, or wind-down routine.</p>
+          <div class="capsule-unbox-cta" id="unboxTrigger">
+            <span class="capsule-visual">💊</span>
+            <h3 style="font-size: 1.3rem; margin-bottom: 6px; color: #fff;" data-i18n="unboxTitle">Tap to Open Today's Capsule</h3>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;" data-i18n="unboxSubtitle">Unpack your 4 essential nutrients: Philosophy, History, Science, and Inspiration</p>
           </div>
-          <div class="step">
-            <strong>2</strong>
-            <h3>Open &amp; Enjoy</h3>
-            <p>A playful “capsule opening” animation sets the vibe, then cards appear in a clean, scrollable stack.</p>
-          </div>
-          <div class="step">
-            <strong>3</strong>
-            <h3>Share or Save</h3>
-            <p>Tap to view details, share highlights, or refresh later when you’re offline—yesterday’s capsule is always there.</p>
+
+          <div class="unbox-cards-grid" id="cardsGrid" style="display: none;">
+            <div class="dose-card quote">
+              <span class="dose-tag" data-i18n="doseQuoteTag">📜 DAILY PHILOSOPHY</span>
+              <p class="dose-content" id="doseQuote">"Simplicity is the prerequisite for reliability."</p>
+              <span class="dose-sub" id="doseAuthor">— Edsger W. Dijkstra</span>
+            </div>
+            <div class="dose-card history">
+              <span class="dose-tag" data-i18n="doseHistoryTag">⏳ ON THIS DAY</span>
+              <p class="dose-content" id="doseHistory">Voyager 1 was launched into space, carrying the Golden Record with sounds of Earth.</p>
+              <span class="dose-sub">September 5, 1977</span>
+            </div>
+            <div class="dose-card fact">
+              <span class="dose-tag" data-i18n="doseFactTag">💡 CURIOUS INSIGHT</span>
+              <p class="dose-content" id="doseFact">Honey found in ancient Egyptian tombs over 3,000 years old is still completely edible.</p>
+              <span class="dose-sub" data-i18n="doseFactSub">Natural Chemistry</span>
+            </div>
+            <div class="dose-card tech">
+              <span class="dose-tag" data-i18n="doseTechTag">🚀 TECH HORIZON</span>
+              <p class="dose-content" id="doseTech">Neural interface prototypes achieve 90 words-per-minute silent speech reconstruction.</p>
+              <span class="dose-sub">Frontiers in AI</span>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="signup">
-        <h2>Be First to Know</h2>
-        <p class="big-text">
-          We’re putting the finishing touches on Daily Digest Capsule. Drop us a line and we’ll let you know the moment it hits the App Store.
-        </p>
-        <div class="card" style="max-width: 520px; margin: 0 auto;">
-          <h3 style="margin-top: 0;">Say hello anytime</h3>
-          <p>
-            Email:
-            <a href="mailto:fangdev1063@gmail.com">fangdev1063@gmail.com</a>
-          </p>
-          <p style="margin-bottom: 0;">
-            Have feedback or partnership ideas? We’d love to hear about them.
-          </p>
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-tag" data-i18n="featuresTag">MINDFUL INFORMATION DIET</span>
+          <h2 class="section-title" data-i18n="featuresTitle">Designed Against the Attention Economy</h2>
+          <p class="section-desc" data-i18n="featuresDesc">Everything you need to feed your intellect each morning, without the algorithmic noise.</p>
         </div>
-      </section>
-    </main>
-    <footer>
-      © 2025 Daily Digest Capsule. All rights reserved.
-    </footer>
-  </body>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">🎯</div>
+            <h3 data-i18n="feat1Title">Curated, Not Flooded</h3>
+            <p data-i18n="feat1Desc">Each day brings one compact capsule. Once you read your daily dose, you're done. No endless scrolling or clickbait rabbit holes.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">⏰</div>
+            <h3 data-i18n="feat2Title">Ritual Morning Delivery</h3>
+            <p data-i18n="feat2Desc">Delivered at your preferred hour each morning with gentle notifications, creating a mindful start to your day with breakfast or coffee.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">🎨</div>
+            <h3 data-i18n="feat3Title">Multi-Dimensional Nutrition</h3>
+            <p data-i18n="feat3Desc">A balanced blend: philosophical reflection, historical perspective, surprising trivia, and world perspective all in one glance.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">📲</div>
+            <h3 data-i18n="feat4Title">iOS 17 Home Screen Widgets</h3>
+            <p data-i18n="feat4Desc">Glanceable quotes and historical milestones right on your Lock Screen and Home Screen with customized typographic themes.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">✈️</div>
+            <h3 data-i18n="feat5Title">100% Offline Archiving</h3>
+            <p data-i18n="feat5Desc">Capsules automatically download for offline reading on subways, flights, or quiet mornings without Wi-Fi.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">🔒</div>
+            <h3 data-i18n="feat6Title">Zero Tracking Privacy</h3>
+            <p data-i18n="feat6Desc">No tracking cookies, no personal identity logging, and no sale of your reading habits. Your intellect remains your own.</p>
+          </div>
+        </div>
+
+        <!-- Privacy Banner -->
+        <div class="privacy-banner">
+          <div class="privacy-info">
+            <h3 data-i18n="privBannerTitle">Full Privacy & AdMob Transparency</h3>
+            <p data-i18n="privBannerDesc">
+              Daily Digest Capsule strictly respects user data boundaries. User preferences and reading history stay inside the device's sandbox. Ads are managed via Google AdMob with full Apple ATT consent choices and official app-ads.txt validation.
+            </p>
+          </div>
+          <a href="privacy.html" class="btn-secondary" data-i18n="privBannerBtn">Read Full Privacy Policy &rarr;</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>Daily Digest Capsule</h4>
+          <p data-i18n="footerTagline">Your daily information nutrition for iOS. Mindful, curated knowledge delivered in bite-sized morning doses.</p>
+        </div>
+        <div class="footer-links-col">
+          <h5 data-i18n="footerLegal">Legal & Compliance</h5>
+          <ul>
+            <li><a href="privacy.html" data-i18n="navPrivacy">Privacy Policy</a></li>
+            <li><a href="terms.html" data-i18n="navTerms">Terms of Use</a></li>
+            <li><a href="app-ads.txt">app-ads.txt</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h5 data-i18n="footerSupport">Support & Feedback</h5>
+          <ul>
+            <li><a href="mailto:fangdev1063@gmail.com">fangdev1063@gmail.com</a></li>
+            <li><a href="https://apps.apple.com/app/id6755092347" target="_blank" rel="noopener">App Store (ID: 6755092347)</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Daily Digest Capsule · All rights reserved. Designed for iOS 17+.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bilingual & Interactive Script -->
+  <script>
+    const i18n = {
+      en: {
+        navFeatures: "Features",
+        navCapsule: "Today's Dose",
+        navPrivacy: "Privacy",
+        navTerms: "Terms",
+        ctaGetApp: "Get Capsule",
+        heroBadge: "Cure Information Overload · 3 Minutes a Day",
+        heroTitle: "Your Daily Information Nutrition",
+        heroSubtitle: "Replace endless, anxiety-inducing social feeds with a thoughtfully packed daily knowledge capsule. Timed delivery, multi-dimensional wisdom, historical echoes, and inspirational sparks.",
+        heroDownload: "Download on App Store",
+        heroExploreDemo: "Unbox Daily Dose",
+        capsuleDateTag: "TODAY'S MORNING DOSE",
+        btnShuffle: "Shuffle Another Day",
+        unboxTitle: "Tap to Open Today's Capsule",
+        unboxSubtitle: "Unpack your 4 essential nutrients: Philosophy, History, Science, and Inspiration",
+        doseQuoteTag: "📜 DAILY PHILOSOPHY",
+        doseHistoryTag: "⏳ ON THIS DAY",
+        doseFactTag: "💡 CURIOUS INSIGHT",
+        doseTechTag: "🚀 TECH HORIZON",
+        doseFactSub: "Natural Chemistry",
+        featuresTag: "MINDFUL INFORMATION DIET",
+        featuresTitle: "Designed Against the Attention Economy",
+        featuresDesc: "Everything you need to feed your intellect each morning, without the algorithmic noise.",
+        feat1Title: "Curated, Not Flooded",
+        feat1Desc: "Each day brings one compact capsule. Once you read your daily dose, you're done. No endless scrolling or clickbait rabbit holes.",
+        feat2Title: "Ritual Morning Delivery",
+        feat2Desc: "Delivered at your preferred hour each morning with gentle notifications, creating a mindful start to your day with breakfast or coffee.",
+        feat3Title: "Multi-Dimensional Nutrition",
+        feat3Desc: "A balanced blend: philosophical reflection, historical perspective, surprising trivia, and world perspective all in one glance.",
+        feat4Title: "iOS 17 Home Screen Widgets",
+        feat4Desc: "Glanceable quotes and historical milestones right on your Lock Screen and Home Screen with customized typographic themes.",
+        feat5Title: "100% Offline Archiving",
+        feat5Desc: "Capsules automatically download for offline reading on subways, flights, or quiet mornings without Wi-Fi.",
+        feat6Title: "Zero Tracking Privacy",
+        feat6Desc: "No tracking cookies, no personal identity logging, and no sale of your reading habits. Your intellect remains your own.",
+        privBannerTitle: "Full Privacy & AdMob Transparency",
+        privBannerDesc: "Daily Digest Capsule strictly respects user data boundaries. User preferences and reading history stay inside the device's sandbox. Ads are managed via Google AdMob with full Apple ATT consent choices and official app-ads.txt validation.",
+        privBannerBtn: "Read Full Privacy Policy →",
+        footerTagline: "Your daily information nutrition for iOS. Mindful, curated knowledge delivered in bite-sized morning doses.",
+        footerLegal: "Legal & Compliance",
+        footerSupport: "Support & Feedback"
+      },
+      zh: {
+        navFeatures: "核心特色",
+        navCapsule: "今日胶囊",
+        navPrivacy: "隐私政策",
+        navTerms: "服务条款",
+        ctaGetApp: "获取胶囊",
+        heroBadge: "对抗信息过载 · 每天 3 分钟信息营养剂",
+        heroTitle: "你的每日信息营养胶囊",
+        heroSubtitle: "告别焦虑无休止的算法信息流，用一颗精选知识胶囊唤醒晨光。固定定时送达、人文哲学、历史回响与前沿新知，构筑从容的心智仪式感。",
+        heroDownload: "前往 App Store 下载",
+        heroExploreDemo: "拆开今日胶囊",
+        capsuleDateTag: "今日晨光营养剂量",
+        btnShuffle: "换一颗新胶囊",
+        unboxTitle: "轻触拆开今日胶囊",
+        unboxSubtitle: "启封 4 大心智养分：哲学箴言、历史这一天、冷知识与科技远景",
+        doseQuoteTag: "📜 每日心智箴言",
+        doseHistoryTag: "⏳ 历史上的今天",
+        doseFactTag: "💡 万物好奇心",
+        doseTechTag: "🚀 科技新视界",
+        doseFactSub: "自然与化学",
+        featuresTag: "告别垃圾信息饲喂",
+        featuresTitle: "专为对抗注意力掠夺而生",
+        featuresDesc: "每天只提供刚刚好的一捧精神食粮，读完即可心满意足开始一天，不再迷失在算法废墟中。",
+        feat1Title: "精选收束 · 绝不过载",
+        feat1Desc: "每天仅精炼生成一颗营养胶囊。读完即止，没有无尽的信息流诱导，帮助用户彻底戒断碎片信息焦虑。",
+        feat2Title: "定时送达 · 仪式阅读",
+        feat2Desc: "支持定制清晨提醒时间，伴随咖啡香气与第一缕晨光，用 3 分钟开启充满充实感的每日早起仪式。",
+        feat3Title: "多维配比 · 均衡滋养",
+        feat3Desc: "巧妙融合哲学金句、历史里程碑、好奇冷门常识与科学微刊，多角度拓宽认知视野。",
+        feat4Title: "iOS 17 原生桌面组件",
+        feat4Desc: "支持灵动锁屏组件与优雅的主屏幕小组件，轻抬手腕即可在 Apple 级排版中汲取当日灵感。",
+        feat5Title: "全离线自动归档",
+        feat5Desc: "每日胶囊自动缓存至本地沙盒，在早高峰地铁、飞行模式或弱网环境下随时畅读，并支持日历按月回溯。",
+        feat6Title: "零追踪 · 本地守护",
+        feat6Desc: "无须注册账号，不追踪用户阅读习惯与偏好画像。你的精神摄入与个人隐私完全属于自己。",
+        privBannerTitle: "严苛遵守隐私与 AdMob 合规",
+        privBannerDesc: "Daily Digest Capsule 坚持本地化数据架构，阅读收藏与历史均保存在本设备沙盒。集成 Google AdMob 并完全遵守苹果 ATT 授权协议与 app-ads.txt 官方验证。",
+        privBannerBtn: "查阅完整隐私政策 →",
+        footerTagline: "专为 iOS 打造的晨间心智营养胶囊，用精选与克制战胜信息过载。",
+        footerLegal: "合规政策",
+        footerSupport: "技术支持与联络"
+      }
+    };
+
+    let currentLang = 'en';
+    const langBtn = document.getElementById('langToggle');
+
+    function updateLanguage(lang) {
+      currentLang = lang;
+      langBtn.textContent = lang === 'en' ? '中文' : 'English';
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (i18n[lang] && i18n[lang][key]) {
+          el.textContent = i18n[lang][key];
+        }
+      });
+      document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+    }
+
+    langBtn.addEventListener('click', () => {
+      updateLanguage(currentLang === 'en' ? 'zh' : 'en');
+    });
+
+    // Capsule Samples Database
+    const capsules = [
+      {
+        quoteEn: '"Simplicity is the prerequisite for reliability."',
+        quoteZh: '“简单性是可靠性的先决条件。”',
+        author: 'Edsger W. Dijkstra',
+        histEn: 'Voyager 1 was launched into space, carrying the Golden Record.',
+        histZh: '旅行者1号探测器发射升空，携带着记录人类文明之声的镀金唱片。',
+        factEn: 'Honey found in ancient Egyptian tombs over 3,000 years old is still edible.',
+        factZh: '古埃及法老墓中出土的3000年前蜂蜜至今仍未变质且可食用。',
+        techEn: 'Neural interface prototypes achieve 90 WPM silent speech reconstruction.',
+        techZh: '最新脑机接口原型实现每分钟90词的静默语音意念重建。'
+      },
+      {
+        quoteEn: '"The only true wisdom is in knowing you know nothing."',
+        quoteZh: '“真正的智慧，在于知晓自己的无知。”',
+        author: 'Socrates',
+        histEn: 'The first international telegraph message was transmitted across the Atlantic.',
+        histZh: '第一封横跨大西洋的国际海底电报成功完成传送。',
+        factEn: 'A cloud can weigh more than a million pounds despite floating freely.',
+        factZh: '一朵看似轻飘飘的典型积云，其实际含水重量超过500吨。',
+        techEn: 'Perovskite tandem solar cells surpass 34% lab conversion efficiency.',
+        techZh: '钙钛矿叠层太阳能电池实验室光电转化效率突破 34%。'
+      }
+    ];
+
+    let currentCapsuleIdx = 0;
+    const unboxTrigger = document.getElementById('unboxTrigger');
+    const cardsGrid = document.getElementById('cardsGrid');
+    const btnShuffle = document.getElementById('btnShuffleCapsule');
+
+    let audioCtx = null;
+    function playChime() {
+      try {
+        if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        if (audioCtx.state === 'suspended') audioCtx.resume();
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(523.25, audioCtx.currentTime); // C5
+        osc.frequency.setValueAtTime(659.25, audioCtx.currentTime + 0.1); // E5
+        osc.frequency.setValueAtTime(783.99, audioCtx.currentTime + 0.2); // G5
+        gain.gain.setValueAtTime(0.01, audioCtx.currentTime);
+        gain.gain.linearRampToValueAtTime(0.15, audioCtx.currentTime + 0.15);
+        gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.6);
+        osc.start();
+        osc.stop(audioCtx.currentTime + 0.65);
+      } catch (e) {}
+    }
+
+    function renderCapsule(idx) {
+      const c = capsules[idx];
+      document.getElementById('doseQuote').textContent = currentLang === 'zh' ? c.quoteZh : c.quoteEn;
+      document.getElementById('doseAuthor').textContent = `— ${c.author}`;
+      document.getElementById('doseHistory').textContent = currentLang === 'zh' ? c.histZh : c.histEn;
+      document.getElementById('doseFact').textContent = currentLang === 'zh' ? c.factZh : c.factEn;
+      document.getElementById('doseTech').textContent = currentLang === 'zh' ? c.techZh : c.techEn;
+    }
+
+    unboxTrigger.addEventListener('click', () => {
+      playChime();
+      unboxTrigger.style.display = 'none';
+      cardsGrid.style.display = 'grid';
+      renderCapsule(currentCapsuleIdx);
+    });
+
+    btnShuffle.addEventListener('click', () => {
+      playChime();
+      currentCapsuleIdx = (currentCapsuleIdx + 1) % capsules.length;
+      unboxTrigger.style.display = 'none';
+      cardsGrid.style.display = 'grid';
+      renderCapsule(currentCapsuleIdx);
+    });
+  </script>
+</body>
 </html>
-
